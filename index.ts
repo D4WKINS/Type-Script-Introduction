@@ -1,11 +1,10 @@
 
-
 let greeting = "Hello World!"
 
 let x: string
 x = "Carl"
 
-const user={
+const user = {
     name:"Carl",
     country:"England"
 }

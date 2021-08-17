@@ -112,22 +112,28 @@ let mike : PersonInterface = {
     age: 34
 }
 
+//Verbose Class
+// class Person implements PersonInterface{// A class is a type of object that has properties and methods
+//     name: string;
+//     age: number;
+//     // email:string; This property is allowed because it has not been defined within the confines of the interface
+
+// constructor(n: string, a: number){ //A constructor is a function that is executed when an object is created
+//     this.name = n;//this.name refers to the name property of the object i.e. mike
+//     this.age = a;//this.age refers to the age property of the object i.e. 34
+// }
+
+//Shorthand Class
 class Person implements PersonInterface{// A class is a type of object that has properties and methods
-    name: string;
-    age: number;
-    // email:string; This property is allowed because it has not been defined within the confines of the interface
-
-constructor(n: string, a: number){ //A constructor is a function that is executed when an object is created
-    this.name = n;
-    this.age = a;
-}
-
+    constructor(public name: string, public age: number){}
+ 
 greet(){//greet is a method that is executed when the object is created
     return `Hi,my name is ${this.name} and I am ${this.age}`
     }
 }
-let john =new Person("John",34);
-console.log(john.greet())
+
+let message =new Person("Carl",22);
+console.log(message.greet())
 
 
 

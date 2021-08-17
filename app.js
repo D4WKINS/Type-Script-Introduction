@@ -63,16 +63,25 @@ var mike = {
     name: "Mike",
     age: 34
 };
+//Verbose Class
+// class Person implements PersonInterface{// A class is a type of object that has properties and methods
+//     name: string;
+//     age: number;
+//     // email:string; This property is allowed because it has not been defined within the confines of the interface
+// constructor(n: string, a: number){ //A constructor is a function that is executed when an object is created
+//     this.name = n;//this.name refers to the name property of the object i.e. mike
+//     this.age = a;//this.age refers to the age property of the object i.e. 34
+// }
+//Shorthand Class
 var Person = /** @class */ (function () {
-    // email:string; This property is allowed because it has not been defined within the confines of the interface
-    function Person(n, a) {
-        this.name = n;
-        this.age = a;
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
     }
     Person.prototype.greet = function () {
         return "Hi,my name is " + this.name + " and I am " + this.age;
     };
     return Person;
 }());
-var john = new Person("John", 34);
-console.log(john.greet());
+var message = new Person("Carl", 22);
+console.log(message.greet());
